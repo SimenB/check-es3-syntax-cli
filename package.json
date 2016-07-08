@@ -44,6 +44,6 @@
     "eslint": "^3.0.1",
     "eslint-config-airbnb-base": "^4.0.0",
     "eslint-plugin-import": "^1.10.2",
-    "node-version-check": "^1.0.1"
+    "node-version-check": "^2.0.2"
   }
 }
