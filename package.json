@@ -43,6 +43,7 @@
     "babel-register": "^6.7.2",
     "eslint": "^3.1.1",
     "eslint-config-airbnb-base": "^5.0.0",
+    "eslint-config-simenb-base": "^1.1.0",
     "eslint-plugin-import": "^1.11.1",
     "node-version-check": "^2.0.2"
   }

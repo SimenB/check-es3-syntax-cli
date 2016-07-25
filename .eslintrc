@@ -1,12 +1,6 @@
 {
-  "extends": "airbnb-base",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    }
-  },
+  "extends": "simenb-base",
   "rules": {
-    "max-len": ["error", 140],
     "no-console": "off"
   }
 }
