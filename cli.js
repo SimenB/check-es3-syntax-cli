@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import check from 'check-es3-syntax';
 
 const argv = yargs
+  .usage('Usage: $0 [options] file_or_directory_name(s)')
   .demand(1, 'Must be called with at least one file')
   .option('patch', {
     describe: 'print patch-file to disk',

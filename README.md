@@ -17,15 +17,18 @@ $ check-es3-syntax file1.js file2.js [options]
 
 ## Options
 
-```bash
---patch          print patch-file to disk           [boolean] [default: false]
--d, --directory  if `file` is used, this sets a directory to write the files
-                 to. defaults to `process.cwd()`                      [string]
--k, --kill       exit the process with -1 if differences are found
-                                                    [boolean] [default: false]
--p, --print      print a colorized diff to the console
-                                                    [boolean] [default: false]
--h, --help       Show help                                           [boolean]
+```
+Usage: check-es3-syntax [options] file_or_directory_name(s)
+
+Options:
+  --patch          print patch-file to disk           [boolean] [default: false]
+  -d, --directory  if `file` is used, this sets a directory to write the files
+                   to. defaults to `process.cwd()`                      [string]
+  -k, --kill       exit the process with -1 if differences are found
+                                                      [boolean] [default: false]
+  -p, --print      print a colorized diff to the console
+                                                      [boolean] [default: false]
+  -h, --help       Show help                                           [boolean]
 ```
 
 ## Tool
