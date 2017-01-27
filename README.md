@@ -7,7 +7,7 @@
 [![bitHound Dependencies][bithound-image]][bithound-url]
 [![Dependency Status][david-image]][david-url]
 [![Dev Dependency Status][david-dev-image]][david-dev-url]
-[![Peer Dependency Status][david-peer-image]][david-peer-url]
+[![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 ## Usage
 
@@ -43,7 +43,7 @@ Options:
 [bithound-image]: https://www.bithound.io/github/SimenB/check-es3-syntax-cli/badges/dependencies.svg
 [david-url]: https://david-dm.org/SimenB/check-es3-syntax-cli
 [david-image]: https://img.shields.io/david/SimenB/check-es3-syntax-cli.svg
-[david-dev-url]: https://david-dm.org/SimenB/check-es3-syntax-cli#info=devDependencies
+[david-dev-url]: https://david-dm.org/SimenB/check-es3-syntax-cli?type=dev
 [david-dev-image]: https://img.shields.io/david/dev/SimenB/check-es3-syntax-cli.svg
-[david-peer-url]: https://david-dm.org/SimenB/check-es3-syntax-cli#info=peerDependencies
-[david-peer-image]: https://img.shields.io/david/peer/SimenB/check-es3-syntax-cli.svg
+[greenkeeper-url]: https://greenkeeper.io/
+[greenkeeper-image]: https://badges.greenkeeper.io/SimenB/check-es3-syntax-cli.svg
