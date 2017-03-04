@@ -32,8 +32,7 @@ const argv = yargs
   })
   .implies('directory', 'patch')
   .help()
-  .alias('h', 'help')
-  .argv;
+  .alias('h', 'help').argv;
 
 const colorize = part => {
   if (part.added) return chalk.green(part.value);
@@ -70,7 +69,8 @@ check(argv._, {
           text,
         };
       })
-      .reduce((memo, { filename, text }) => `${memo}${path.resolve(filename)}\n${text}\n\n`, '').trim();
+      .reduce((memo, { filename, text }) => `${memo}${path.resolve(filename)}\n${text}\n\n`, '')
+      .trim();
 
     console.log(output);
   })
