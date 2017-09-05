@@ -5,7 +5,7 @@ import yargs from 'yargs';
 import chalk from 'chalk';
 import check from 'check-es3-syntax';
 
-const argv = yargs
+const { argv } = yargs
   .usage('Usage: $0 [options] file_or_directory_name(s)')
   .demand(1, 'Must be called with at least one file')
   .option('patch', {
@@ -15,7 +15,8 @@ const argv = yargs
   })
   .option('d', {
     alias: 'directory',
-    describe: 'if `file` is used, this sets a directory to write the files to. defaults to `process.cwd()`',
+    describe:
+      'if `file` is used, this sets a directory to write the files to. defaults to `process.cwd()`',
     type: 'string',
   })
   .option('k', {
@@ -31,8 +32,7 @@ const argv = yargs
     type: 'boolean',
   })
   .implies('directory', 'patch')
-  .help()
-  .alias('h', 'help').argv;
+  .alias('h', 'help');
 
 const colorize = part => {
   if (part.added) return chalk.green(part.value);
@@ -48,13 +48,17 @@ check(argv._, {
   .tap(arr => {
     if (arr.length === 0) return;
 
-    console.log('There are differences between input version and the ES3 version');
+    console.log(
+      'There are differences between input version and the ES3 version'
+    );
 
     if (!argv.print) {
       if (argv.patch) {
         console.log('Patch file written to disk');
       } else {
-        console.log('Pass `-p` to the cli to print the difference, or `--patch` to create a patch file');
+        console.log(
+          'Pass `-p` to the cli to print the difference, or `--patch` to create a patch file'
+        );
       }
 
       return;
@@ -62,14 +66,21 @@ check(argv._, {
 
     const output = arr
       .map(({ textDiff, ...rest }) => {
-        const text = textDiff.reduce((memo, part) => `${memo}${colorize(part)}`, '');
+        const text = textDiff.reduce(
+          (memo, part) => `${memo}${colorize(part)}`,
+          ''
+        );
 
         return {
           ...rest,
           text,
         };
       })
-      .reduce((memo, { filename, text }) => `${memo}${path.resolve(filename)}\n${text}\n\n`, '')
+      .reduce(
+        (memo, { filename, text }) =>
+          `${memo}${path.resolve(filename)}\n${text}\n\n`,
+        ''
+      )
       .trim();
 
     console.log(output);
